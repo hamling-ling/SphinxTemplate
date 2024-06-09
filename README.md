@@ -13,5 +13,8 @@ docker build -f docker/Dockerfile -t sphinx .
 
 ```
 cd SphinxTemplate
-docker run -it -v ${PWD}/src/sample:/doc sphinx bash -c "cd /doc && make clean latexpdf"
+docker run --rm \
+-u $(id -u $USER):$(id -g $USER) \
+-it -v ${PWD}/src/sample:/docs \
+sphinx bash -c "cd /docs && make clean latexpdf"
 ```
