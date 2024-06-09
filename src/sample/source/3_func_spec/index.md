@@ -24,3 +24,14 @@ int main(const int argc, const char** argv) {
 
    \clearpage
 ```
+
+### Mermaid
+
+```{mermaid}
+
+
+    sequenceDiagram
+      participant Alice
+      participant Bob
+      Alice->>John: Hello John, how are you?
+```
