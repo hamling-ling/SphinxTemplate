@@ -113,3 +113,5 @@ class DummyTransform(sphinx.builders.latex.transforms.BibliographyTransform):
   def run(self, **kwargs):
     pass
 sphinx.builders.latex.transforms.BibliographyTransform = DummyTransform
+
+mermaid_params = ['-p', 'puppeteer-config.json']

@@ -47,4 +47,10 @@ RUN python3 -m pip install --no-cache-dir \
     myst_parser \
     sphinxcontrib-mermaid
 
+RUN npm install -g @mermaid-js/mermaid-cli
+
+RUN cp -r /root/.cache /opt
+RUN chmod -R 777 /opt/.cache
+RUN chown nobody:nogroup /opt/.cache
+
 ENV PLANTUML_JAR_PATH ${PLANTUML_DIR}/plantuml.jar
