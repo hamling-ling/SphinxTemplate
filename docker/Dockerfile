@@ -32,7 +32,9 @@ RUN apt-get update && apt-get install -y \
     fonts-ipafont \
     fonts-ipaexfont \
     texlive-font-utils \
-    doxygen
+    doxygen \
+    npm \
+    chromium
 
 RUN wget "https://github.com/plantuml/plantuml/releases/download/v${PLANTUML_VERSION}/plantuml-mit-${PLANTUML_VERSION}.jar" -O plantuml.jar
 RUN mv plantuml.jar ${PLANTUML_DIR}
@@ -44,5 +46,11 @@ RUN python3 -m pip install --no-cache-dir \
     sphinxcontrib-bibtex \
     myst_parser \
     sphinxcontrib-mermaid
+
+RUN npm install -g @mermaid-js/mermaid-cli
+
+RUN cp -r /root/.cache /opt
+RUN chmod -R 777 /opt/.cache
+RUN chown nobody:nogroup /opt/.cache
 
 ENV PLANTUML_JAR_PATH ${PLANTUML_DIR}/plantuml.jar
