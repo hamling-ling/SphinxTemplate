@@ -30,7 +30,17 @@ int main(const int argc, const char** argv) {
 
 ### Mermaid
 
-```{mermaid}
+Mermaid のUML図
+
+```{figure} ./1pix.png
+---
+  width: 1px
+  height: 1px
+  name: rst-fun-fish
+---
+  マーメイド図
+
+```
 
 ```{mermaid}
 
@@ -39,3 +49,7 @@ int main(const int argc, const char** argv) {
       participant Bob
       Alice->>John: Hello John, how are you?
 ```
+
+
+この位置はどこかな？
+{numref}`rst-fun-fish`
