@@ -115,3 +115,5 @@ class DummyTransform(sphinx.builders.latex.transforms.BibliographyTransform):
 sphinx.builders.latex.transforms.BibliographyTransform = DummyTransform
 
 mermaid_params = ['-p', 'puppeteer-config.json']
+mermaid_pdfcrop='/usr/bin/pdfcrop'
+mermaid_output_format='svg'

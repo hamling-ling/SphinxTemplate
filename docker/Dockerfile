@@ -34,7 +34,8 @@ RUN apt-get update && apt-get install -y \
     texlive-font-utils \
     doxygen \
     npm \
-    chromium
+    chromium \
+    texlive-extra-utils
 
 RUN wget "https://github.com/plantuml/plantuml/releases/download/v${PLANTUML_VERSION}/plantuml-mit-${PLANTUML_VERSION}.jar" -O plantuml.jar
 RUN mv plantuml.jar ${PLANTUML_DIR}
