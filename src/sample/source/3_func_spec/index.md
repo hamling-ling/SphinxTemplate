@@ -24,13 +24,17 @@ int main(const int argc, const char** argv) {
 
    \clearpage
 ```
+## 機能B
+
+機能Bの説明...
 
 ### Mermaid
 
 ```{mermaid}
 
+```{mermaid}
 
-    sequenceDiagram
+   sequenceDiagram
       participant Alice
       participant Bob
       Alice->>John: Hello John, how are you?
